@@ -21,7 +21,7 @@
   </style> -->
   </head>
   <body class="font-PublicSans">
-    <nav class="w-[100%] m-auto relative flex bg-white" style="z-index: 5">
+    <nav class="w-[100%] m-auto relative flex bg-white" style="z-index: 60">
       <div class="container m-auto justify-between lg:justify-evenly flex p-7">
         <div class="w-fit flex items-center">
           <img class="m-auto object-none" src="./images/logo.svg" alt="logo" />
@@ -45,11 +45,18 @@
             >
           </ul>
         </div>
-        <div class="w-fit lg:hidden">
+        <div class="w-fit lg:hidden my-auto">
           <img
             class="m-auto object-none"
             src="./images/icon-hamburger.svg"
             alt="icon-hamburger"
+            id="menuOpen"
+          />
+          <img
+            class="block hidden"
+            src="./images/icon-close.svg"
+            alt="menuClose"
+            id="menuClose"
           />
         </div>
         <button
@@ -59,6 +66,25 @@
         </button>
       </div>
     </nav>
+    <menu
+      class="hidden fixed w-[100%] top-0 bg-opacity-40 overflow-hidden bg-Primary-DarkBlue h-screen z-50"
+      id="menu"
+    >
+      <div
+        class="container top-24 left-1/2 duration-400 delay-500 transition transform -translate-x-1/2 py-7 absolute w-[20rem] rounded-xl bg-white"
+        id="menuSlide"
+      >
+        <ul
+          class="flex flex-col text-center gap-5 text-Primary-DarkBlue m-auto items-center"
+        >
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Blog</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+    </menu>
 
     <header class="relative overflow-x-clip h-fit lg:flex flex-row-reverse">
       <div class="container lg:absolute m-auto h-fit">
@@ -182,7 +208,7 @@
         </h1>
         <div class="grid lg:grid-cols-4">
           <div
-            class="m-auto mt-[2rem]  w-[27rem] lg:w-[22rem] overflow-hidden rounded-xl shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]"
+            class="m-auto mt-[2rem] w-[27rem] lg:w-[22rem] overflow-hidden rounded-xl shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]"
           >
             <div class="m-auto overflow-hidden h-[234px]">
               <img
@@ -370,5 +396,6 @@
         </div>
       </div>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
